@@ -86,7 +86,7 @@ function Index() {
                 </dl>
               </div>
               <div className="relative h-[140px] sm:h-[152px] bg-highlight overflow-hidden">
-                <img src={skyline} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[75%_100%] sm:object-right-bottom mix-blend-darken" />
+                <img src={skyline} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[30%_100%] sm:object-right-bottom mix-blend-darken" />
                 <div className="relative px-7 pt-[28px]">
                   <p className="eyebrow text-[12px] tracking-[0.25em] leading-[1.8]">United Arab Emirates<br />Ajman Free Zone</p>
                   <Rule className="mt-2 w-[46px]" />
