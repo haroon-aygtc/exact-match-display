@@ -1,24 +1,141 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowRight, Box, Database, Link2, BarChart3 } from "lucide-react";
+import heroArch from "@/assets/hero-arch.jpg";
+import mission from "@/assets/mission.jpg";
+import vision from "@/assets/vision.jpg";
+import skyline from "@/assets/skyline.jpg";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "About AxonStream — Technology Driven by Ideas" },
+      { name: "description", content: "AxonStream is an independent software and technology company in the UAE building intelligent digital solutions." },
+      { property: "og:title", content: "About AxonStream" },
+      { property: "og:description", content: "Technology driven by ideas. Defined by engineering." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+const Rule = ({ className = "" }: { className?: string }) => (
+  <span className={`block h-px w-[40px] bg-current opacity-40 ${className}`} />
+);
+
+const info = [
+  ["Legal Entity", "AXON STREAM AI – F.Z.C"],
+  ["Jurisdiction", "Ajman Free Zone,\nUnited Arab Emirates"],
+  ["Website", "https://axonstream.ai"],
+  ["Email", "hello@axonstream.ai"],
+];
+
+const values = [
+  [Box, "Practical\nEngineering"],
+  [Database, "Continuous\nLearning"],
+  [Link2, "Meaningful\nCollaboration"],
+  [BarChart3, "Real-World\nImpact"],
+] as const;
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="min-h-screen bg-background text-foreground font-body">
+      <div className="mx-auto max-w-[1672px] px-5 lg:px-[46px] pt-[18px] pb-10">
+        {/* Top */}
+        <div className="grid gap-6 lg:grid-cols-[655px_1fr]">
+          <div className="pt-[28px] lg:pl-[45px]">
+            <div className="flex items-center gap-4">
+              <span className="eyebrow text-[13px] tracking-[0.35em]">About AxonStream</span>
+              <span className="relative block h-px w-[105px] bg-foreground/40">
+                <span className="absolute left-[62px] -top-[1.5px] h-1 w-1 rounded-full bg-foreground" />
+              </span>
+            </div>
+            <h1 className="font-display mt-[22px] text-[44px] sm:text-[76px] leading-[0.92] uppercase">
+              Technology<br />driven by ideas.<br />Defined by<br />engineering.
+            </h1>
+            <p className="mt-6 text-[17px] sm:text-[20px] leading-[1.25] text-foreground/80 max-w-[540px]">
+              AxonStream is an independent software and technology company based in the United Arab Emirates, developing original software products and engineering intelligent digital solutions.
+            </p>
+            <a href="#mission" className="mt-[20px] inline-flex items-center gap-6 group">
+              <span className="flex h-[62px] w-[62px] items-center justify-center rounded-full border border-foreground/50 transition-colors group-hover:bg-foreground group-hover:text-background">
+                <ArrowRight className="h-5 w-5" strokeWidth={1.5} />
+              </span>
+              <span className="eyebrow text-[12px] tracking-[0.25em] leading-[1.45]">Learn more<br />about axonstream</span>
+            </a>
+          </div>
+
+          <div className="relative lg:pr-[0px]">
+            <div className="relative overflow-hidden rounded-[10px] lg:mr-[209px] h-[420px] lg:h-[547px]">
+              <img src={heroArch} alt="Angular modern architecture" width={1152} height={1088} className="h-full w-full object-cover" />
+              <div className="absolute left-6 top-[28px] text-surface-dark-foreground">
+                <p className="eyebrow text-[13px] tracking-[0.32em] leading-[1.8]">Building<br />intelligent<br />technologies<br />for a connected<br />tomorrow.</p>
+                <Rule className="mt-4 w-[58px] opacity-70" />
+              </div>
+            </div>
+            <div className="mt-4 lg:mt-0 lg:absolute lg:right-0 lg:top-[28px] lg:w-[378px] rounded-[10px] overflow-hidden shadow-card">
+              <div className="bg-card px-9 pt-[33px] pb-6">
+                <p className="eyebrow text-[13px] tracking-[0.3em] leading-[1.8]">Company<br />information</p>
+                <Rule className="mt-3 w-[52px]" />
+                <dl className="mt-[22px]">
+                  {info.map(([k, v], i) => (
+                    <div key={k} className={`grid grid-cols-[108px_1fr] py-[15px] ${i < info.length - 1 ? "border-b border-border" : ""}`}>
+                      <dt className="text-[13px] text-muted-foreground">{k}</dt>
+                      <dd className="text-[14px] whitespace-pre-line leading-[1.5]">{v}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+              <div className="relative h-[152px] bg-highlight overflow-hidden">
+                <img src={skyline} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-right-bottom" />
+                <div className="relative px-7 pt-[28px]">
+                  <p className="eyebrow text-[12px] tracking-[0.25em] leading-[1.8]">United Arab Emirates<br />Ajman Free Zone</p>
+                  <Rule className="mt-2 w-[46px]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom cards */}
+        <div id="mission" className="mt-[12px] grid gap-3 lg:grid-cols-[527px_494px_1fr]">
+          <div className="relative overflow-hidden rounded-[8px] bg-surface-dark text-surface-dark-foreground h-[254px]">
+            <img src={mission} alt="" loading="lazy" className="absolute right-0 top-0 h-full w-[60%] object-cover [mask-image:linear-gradient(to_right,transparent,black_35%)]" />
+            <div className="relative px-[46px] pt-[30px]">
+              <p className="eyebrow text-[13px] tracking-[0.3em] leading-[1.75]">Our<br />mission</p>
+              <Rule className="mt-3 w-[38px] opacity-60" />
+              <p className="mt-6 text-[15px] leading-[1.55] max-w-[260px]">To build practical, adaptable, and intelligent software solutions that create real value and open new possibilities.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-[1fr_181px] overflow-hidden rounded-[8px] bg-card h-[254px]">
+            <div className="px-[44px] pt-[30px]">
+              <p className="eyebrow text-[12px] tracking-[0.3em] leading-[1.75]">Our<br />vision</p>
+              <Rule className="mt-3 w-[38px]" />
+              <p className="mt-6 text-[15px] leading-[1.5] text-foreground/85">To contribute to a future where software, artificial intelligence, and digital technologies are more connected, capable, and accessible.</p>
+            </div>
+            <img src={vision} alt="" loading="lazy" className="h-full w-full object-cover" />
+          </div>
+          <div className="rounded-[8px] bg-card/60 px-[34px] pt-[30px] pb-6 min-h-[254px]">
+            <p className="eyebrow text-[12px] tracking-[0.3em] leading-[1.75]">Our<br />values</p>
+            <Rule className="mt-3 w-[38px]" />
+            <div className="mt-4 grid grid-cols-2 sm:grid-cols-4">
+              {values.map(([Icon, label], i) => (
+                <div key={label} className={`py-2 ${i ? "sm:border-l border-border sm:pl-7" : ""}`}>
+                  <Icon className="h-7 w-7" strokeWidth={1.3} />
+                  <p className="mt-4 text-[15px] leading-[1.45] whitespace-pre-line">{label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <footer className="mt-[30px] border-t border-border pt-5 flex flex-wrap justify-between gap-3 text-muted-foreground">
+          <p className="eyebrow text-[11px] tracking-[0.22em]">Software engineering &nbsp;/&nbsp; Artificial intelligence &nbsp;/&nbsp; Digital technologies</p>
+          <div className="flex items-center gap-3">
+            <span className="h-px w-[122px] bg-border" />
+            <p className="eyebrow text-[11px] tracking-[0.22em]">Creating possibilities together</p>
+          </div>
+        </footer>
+      </div>
+    </main>
   );
 }
