@@ -50,7 +50,7 @@ function Index() {
                 <span className="absolute left-[62px] -top-[1.5px] h-1 w-1 rounded-full bg-foreground" />
               </span>
             </div>
-            <h1 className="font-display mt-[22px] text-[44px] sm:text-[72px] leading-[0.92] uppercase">
+            <h1 className="font-display mt-[22px] text-[44px] sm:text-[76px] leading-[0.92] uppercase">
               Technology<br />driven by ideas.<br />Defined by<br />engineering.
             </h1>
             <p className="mt-6 text-[17px] sm:text-[20px] leading-[1.25] text-foreground/80 max-w-[540px]">
@@ -99,7 +99,7 @@ function Index() {
         {/* Bottom cards */}
         <div id="mission" className="mt-[12px] grid gap-3 lg:grid-cols-[527px_494px_1fr]">
           <div className="relative overflow-hidden rounded-[8px] bg-surface-dark text-surface-dark-foreground h-[254px]">
-            <img src={mission} alt="" loading="lazy" className="absolute right-0 top-0 h-full w-[60%] object-cover" />
+            <img src={mission} alt="" loading="lazy" className="absolute right-0 top-0 h-full w-[60%] object-cover [mask-image:linear-gradient(to_right,transparent,black_35%)]" />
             <div className="relative px-[46px] pt-[30px]">
               <p className="eyebrow text-[13px] tracking-[0.3em] leading-[1.75]">Our<br />mission</p>
               <Rule className="mt-3 w-[38px] opacity-60" />

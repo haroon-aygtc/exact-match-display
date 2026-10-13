@@ -83,7 +83,7 @@
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
+  --muted-foreground: oklch(0.5 0.005 85);
   --accent: oklch(0.968 0.007 247.896);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
@@ -152,7 +152,7 @@
   }
 }
 
-.font-display{font-family:var(--font-display);font-weight:900;font-stretch:62%;letter-spacing:-0.01em}
+.font-display{font-family:var(--font-display);font-weight:900;font-stretch:72%;letter-spacing:-0.01em}
 .font-body{font-family:var(--font-body)}
 .eyebrow{text-transform:uppercase;font-weight:500}
 .shadow-card{box-shadow:var(--shadow-card)}
