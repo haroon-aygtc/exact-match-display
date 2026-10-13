@@ -86,7 +86,7 @@ function Index() {
                 </dl>
               </div>
               <div className="relative h-[140px] sm:h-[152px] bg-highlight overflow-hidden">
-                <img src={skyline} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[75%_100%] sm:object-right-bottom" />
+                <img src={skyline} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[75%_100%] sm:object-right-bottom mix-blend-multiply" />
                 <div className="relative px-7 pt-[28px]">
                   <p className="eyebrow text-[12px] tracking-[0.25em] leading-[1.8]">United Arab Emirates<br />Ajman Free Zone</p>
                   <Rule className="mt-2 w-[46px]" />
@@ -129,7 +129,7 @@ function Index() {
         </div>
 
         <footer className="mt-[30px] border-t border-border pt-5 flex flex-wrap justify-between gap-3 text-muted-foreground">
-          <p className="eyebrow text-[10px] sm:text-[11px] tracking-[0.18em] sm:tracking-[0.22em]">Software engineering &nbsp;/&nbsp; Artificial intelligence <span className="hidden sm:inline">&nbsp;/&nbsp; </span><br className="sm:hidden" />Digital technologies</p>
+          <p className="eyebrow text-[10px] sm:text-[11px] tracking-[0.18em] sm:tracking-[0.22em]">Software engineering &nbsp;/&nbsp; <span className="whitespace-nowrap">Artificial intelligence</span> <span className="hidden sm:inline">&nbsp;/&nbsp; </span><br className="sm:hidden" />Digital technologies</p>
           <div className="flex items-center gap-3">
             <span className="hidden sm:block h-px w-[122px] bg-border" />
             <p className="eyebrow text-[11px] tracking-[0.22em]">Creating possibilities together</p>
