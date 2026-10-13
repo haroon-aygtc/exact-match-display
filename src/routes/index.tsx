@@ -4,6 +4,7 @@ import heroArch from "@/assets/hero-arch.jpg";
 import mission from "@/assets/mission.jpg";
 import vision from "@/assets/vision.jpg";
 import skyline from "@/assets/skyline.jpg";
+import { CoreSection } from "@/components/core-section";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -136,6 +137,7 @@ function Index() {
           </div>
         </footer>
       </div>
+      <CoreSection />
     </main>
   );
 }

@@ -53,6 +53,8 @@
   --color-chart-5: var(--chart-5);
   --color-sidebar: var(--sidebar);
   --color-highlight: var(--highlight);
+  --color-core-accent: var(--core-accent);
+  --color-status: var(--status);
   --color-surface-dark: var(--surface-dark);
   --color-surface-dark-foreground: var(--surface-dark-foreground);
   --font-display: "Archivo", sans-serif;
@@ -71,6 +73,8 @@
   --radius: 0.625rem;
   --background: oklch(0.965 0.006 85);
   --highlight: oklch(0.91 0.13 95);
+  --core-accent: oklch(0.69 0.21 36);
+  --status: oklch(0.65 0.18 255);
   --surface-dark: oklch(0.16 0.003 260);
   --surface-dark-foreground: oklch(0.98 0 0);
   --foreground: oklch(0.17 0.005 260);
@@ -156,3 +160,14 @@
 .font-body{font-family:var(--font-body)}
 .eyebrow{text-transform:uppercase;font-weight:500}
 .shadow-card{box-shadow:var(--shadow-card)}
+
+.core-section .font-display { letter-spacing: 0; }
+.core-intro { grid-template-columns: minmax(0, 1fr); }
+.core-scene { min-height: 264px; }
+.core-color-panel { background-image: url("./assets/core-workspace.jpg"); background-blend-mode: soft-light; background-size: cover; }
+.core-feature { min-width: 0; }
+@media (min-width: 1024px) {
+  .core-intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .core-scene { height: 264px; }
+  .core-feature + .core-feature { border-left: 1px solid var(--border); }
+}
