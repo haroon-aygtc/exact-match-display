@@ -50,7 +50,7 @@ function Index() {
                 <span className="absolute left-[62px] -top-[1.5px] h-1 w-1 rounded-full bg-foreground" />
               </span>
             </div>
-            <h1 className="font-display mt-[22px] text-[44px] sm:text-[76px] leading-[0.92] uppercase">
+            <h1 className="font-display mt-[22px] text-[46px] min-[400px]:text-[52px] sm:text-[76px] leading-[0.92] uppercase">
               Technology<br />driven by ideas.<br />Defined by<br />engineering.
             </h1>
             <p className="mt-6 text-[17px] sm:text-[20px] leading-[1.25] text-foreground/80 max-w-[540px]">
