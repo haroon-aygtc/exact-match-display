@@ -4,6 +4,7 @@ import heroArch from "@/assets/hero-arch.jpg";
 import mission from "@/assets/mission.jpg";
 import vision from "@/assets/vision.jpg";
 import skyline from "@/assets/skyline.jpg";
+import { CapabilitiesSection } from "@/components/capabilities-section";
 import { CoreSection } from "@/components/core-section";
 import { HeroSection } from "@/components/hero-section";
 
@@ -139,6 +140,7 @@ function Index() {
           </div>
         </footer>
       </div>
+      <CapabilitiesSection />
       <CoreSection />
     </main>
   );
