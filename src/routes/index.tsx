@@ -5,14 +5,15 @@ import mission from "@/assets/mission.jpg";
 import vision from "@/assets/vision.jpg";
 import skyline from "@/assets/skyline.jpg";
 import { CoreSection } from "@/components/core-section";
+import { HeroSection } from "@/components/hero-section";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "About AxonStream — Technology Driven by Ideas" },
+      { title: "AxonStream — Engineering What’s Next" },
       { name: "description", content: "AxonStream is an independent software and technology company in the UAE building intelligent digital solutions." },
-      { property: "og:title", content: "About AxonStream" },
-      { property: "og:description", content: "Technology driven by ideas. Defined by engineering." },
+      { property: "og:title", content: "AxonStream — Engineering What’s Next" },
+      { property: "og:description", content: "Building software. Advancing technology. Creating possibilities. Independent software engineering and intelligent digital solutions in the UAE." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -41,7 +42,8 @@ const values = [
 function Index() {
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
-      <div className="mx-auto max-w-[1672px] px-5 lg:px-[46px] pt-[18px] pb-10">
+      <HeroSection />
+      <div id="about" className="mx-auto max-w-[1672px] px-5 lg:px-[46px] pt-[18px] pb-10">
         {/* Top */}
         <div className="grid gap-6 lg:grid-cols-[655px_1fr]">
           <div className="pt-[28px] lg:pl-[45px]">
@@ -51,9 +53,9 @@ function Index() {
                 <span className="absolute left-[38px] sm:left-[62px] -top-[1.5px] h-1 w-1 rounded-full bg-foreground" />
               </span>
             </div>
-            <h1 className="font-display mt-[22px] text-[42px] min-[400px]:text-[50px] sm:text-[76px] leading-[0.92] uppercase">
+            <h2 className="font-display mt-[22px] text-[42px] min-[400px]:text-[50px] sm:text-[76px] leading-[0.92] uppercase">
               Technology<br />driven by ideas.<br />Defined by<br />engineering.
-            </h1>
+            </h2>
             <p className="mt-6 text-[17px] sm:text-[20px] leading-[1.25] text-foreground/80 max-w-[540px]">
               AxonStream is an independent software and technology company based in the United Arab Emirates, developing original software products and engineering intelligent digital solutions.
             </p>
