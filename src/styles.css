@@ -190,7 +190,7 @@
 .hero-yellow { left: 0; top: 75.2%; width: 21.5%; height: 27%; background: var(--highlight); }
 .hero-earth { left: 22.1%; top: 70.6%; width: 38.1%; height: 32%; }
 .hero-architecture { left: 60.8%; top: 73.4%; width: 39.2%; height: 30%; }
-.hero-orange, .hero-blue, .hero-yellow { background-image: url('./assets/home-walk.jpg'); background-size: cover; background-blend-mode: soft-light; }
+.hero-orange, .hero-blue, .hero-yellow { background-image: url('./assets/home-walk.jpg'); background-size: auto 400%; background-position: center top; background-blend-mode: soft-light; }
 @media (min-width: 1536px) {
   .hero-section { min-height: 900px; }
   .hero-copy { padding-top: 95px; }
