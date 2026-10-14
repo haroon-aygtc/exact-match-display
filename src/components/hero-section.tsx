@@ -5,7 +5,7 @@ import dubai from "@/assets/home-dubai.jpg";
 import sculpture from "@/assets/home-sculpture.jpg";
 import walk from "@/assets/home-walk.jpg";
 import earth from "@/assets/home-earth.jpg";
-import laptop from "@/assets/mission.jpg";
+import laptop from "@/assets/core-workspace.jpg";
 import architecture from "@/assets/hero-arch.jpg";
 
 const navigation = [
@@ -23,7 +23,7 @@ function HeroMosaic() {
       <img className="hero-tile hero-dubai" src={dubai} alt="Dubai skyline beneath a cantilevered concrete building" width={768} height={1152} fetchPriority="high" />
       <div className="hero-tile hero-orange" />
       <img className="hero-tile hero-sculpture" src={sculpture} alt="Black and orange sculptural architecture" width={816} height={816} />
-      <img className="hero-tile hero-laptop" src={laptop} alt="Software development workspace" width={768} height={768} />
+      <img className="hero-tile hero-laptop" src={laptop} alt="Software development workspace" width={1920} height={768} />
       <div className="hero-tile hero-blue" />
       <img className="hero-tile hero-walk" src={walk} alt="A person walking through sunlit concrete architecture" width={816} height={816} />
       <div className="hero-tile hero-yellow" />

@@ -173,7 +173,7 @@
 .hero-wordmark { font-size: 18px; letter-spacing: 0.2em; }
 .hero-copy { width: 52.7%; padding: 74px 5% 48px; }
 .hero-eyebrow { font-size: 10px; letter-spacing: 0.15em; white-space: nowrap; }
-.hero-heading { font-size: 104px; line-height: 0.88; margin-top: 25px; font-stretch: 72%; }
+.hero-heading { font-size: 104px; line-height: 0.88; margin-top: 25px; font-variation-settings: "wdth" 62; white-space: nowrap; }
 .hero-subheading { font-size: 25px; line-height: 1.06; margin-top: 12px; }
 .hero-paragraphs { max-width: 500px; font-size: 14px; line-height: 1.4; margin-top: 25px; }
 .hero-paragraphs p + p { margin-top: 8px; }
