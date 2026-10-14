@@ -5,7 +5,7 @@ import workspace from "@/assets/core-workspace.jpg";
 import architecture from "@/assets/hero-arch.jpg";
 
 const packageUrl = "https://www.npmjs.com/package/@axonstream/core";
-const repositoryUrl = "https://github.com/search?q=axonstream+core&type=repositories";
+const repositoryUrl = "https://github.com/AxonStream/axonstream-core";
 const installCommand = "npm install @axonstream/core";
 
 const features = [
@@ -100,7 +100,7 @@ export function CoreSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 px-5 py-5 sm:grid-cols-2 sm:px-10 lg:grid-cols-5 lg:px-[5.4%]">
+      <div id="capabilities" className="grid grid-cols-1 px-5 py-5 sm:grid-cols-2 sm:px-10 lg:grid-cols-5 lg:px-[5.4%]">
         {features.map(({ icon: Icon, title, text }, i) => (
           <div key={title} className="core-feature grid grid-cols-[21px_minmax(0,1fr)] gap-3 border-b border-border py-4 sm:pr-5 lg:border-b-0 lg:px-7 lg:py-0 lg:first:pl-0 lg:last:pr-0">
             <span className="pt-1 text-[9px] font-medium tracking-[0.1em]">0{i + 1}</span>

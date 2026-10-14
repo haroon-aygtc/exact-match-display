@@ -12,3 +12,4 @@
 ## Landing page structure
 - Implement added product sections as self-contained components composed by the index route, reusing the global typography and semantic tokens so subsequent sections remain consistent.
 - Use the shared Button component for section actions and data-driven arrays for repeated feature rows to keep controls and layout reusable.
+- Compose the opening HeroSection before About and Core, using section anchors for navigation to existing content so the single-page experience remains extensible.
