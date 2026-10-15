@@ -260,7 +260,7 @@
 .section-copy { font-size: var(--section-copy-size); line-height: var(--section-copy-leading); color: color-mix(in oklab, var(--foreground) 74%, var(--background)); }
 .section-rule { display: block; height: 1px; flex-shrink: 0; background: color-mix(in oklab, var(--foreground) 28%, var(--background)); }
 .reference-texture { background-image: url('./assets/principles-architecture.jpg'); background-blend-mode: soft-light; background-size: auto 500%; background-position: right bottom; }
-.engineering-section { min-height: 768px; padding-bottom: 47px; }
+.engineering-section { min-height: 768px; padding-bottom: 42px; }
 .engineering-intro { height: 278px; }
 .engineering-intro-copy { padding-top: 39px; margin-left: 5.4%; z-index: 2; }
 .engineering-heading { margin-top: 21px; font-size: 70px; line-height: 0.86; font-variation-settings: "wdth" 70; }
@@ -317,7 +317,7 @@
   .principle-copy { min-height: 95px; }
 }
 @media (max-width: 639px) {
-  .engineering-heading { font-size: 36px; }
+  .engineering-heading { font-size: 36px; font-variation-settings: "wdth" 62; }
   .section-label { font-size: 9px; }
   .engineering-grid { grid-template-columns: minmax(0,1fr); gap: 28px; }
   .engineering-section .engineering-principle { padding: 0; border-left: 0; }
