@@ -6,6 +6,7 @@ import vision from "@/assets/vision.jpg";
 import skyline from "@/assets/skyline.jpg";
 import { CoreSection } from "@/components/core-section";
 import { HeroSection } from "@/components/hero-section";
+import { EngineeringSection } from "@/components/engineering-section";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -140,6 +141,7 @@ function Index() {
         </footer>
       </div>
       <CoreSection />
+      <EngineeringSection />
     </main>
   );
 }

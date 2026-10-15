@@ -243,3 +243,85 @@
   .core-scene { height: 264px; }
   .core-feature + .core-feature { border-left: 1px solid var(--border); }
 }
+
+/* Shared section primitives; existing sections retain their original rules. */
+:root {
+  --section-max-width: 1672px;
+  --section-copy-size: 14px;
+  --section-copy-leading: 1.32;
+  --section-label-size: 11px;
+  --section-display-size: 64px;
+  --section-display-leading: 0.94;
+  --section-media-radius: 8px;
+}
+.section-container { max-width: var(--section-max-width); margin-inline: auto; }
+.section-label { font-size: var(--section-label-size); letter-spacing: 0.3em; }
+.section-display { font-size: var(--section-display-size); line-height: var(--section-display-leading); font-variation-settings: "wdth" 62; }
+.section-copy { font-size: var(--section-copy-size); line-height: var(--section-copy-leading); color: color-mix(in oklab, var(--foreground) 74%, var(--background)); }
+.section-rule { display: block; height: 1px; flex-shrink: 0; background: color-mix(in oklab, var(--foreground) 28%, var(--background)); }
+.reference-texture { background-image: url('./assets/principles-architecture.jpg'); background-blend-mode: soft-light; background-size: auto 500%; background-position: right bottom; }
+.engineering-section { min-height: 768px; padding-bottom: 47px; }
+.engineering-intro { height: 278px; }
+.engineering-intro-copy { padding-top: 39px; margin-left: 5.4%; z-index: 2; }
+.engineering-heading { margin-top: 21px; }
+.engineering-subheading { margin-top: 10px; max-width: 550px; }
+.engineering-cover { position: absolute; left: 42.4%; top: 0; width: 40.9%; height: 278px; overflow: hidden; border-top-left-radius: var(--section-media-radius); border-bottom-left-radius: var(--section-media-radius); }
+.engineering-cover img { width: 74%; height: 100%; object-fit: cover; }
+.engineering-cover-accent { position: absolute; right: 0; bottom: 0; width: 32%; height: 47%; border-top-left-radius: 24px; border-top-right-radius: 12px; transform: skewX(-13deg); transform-origin: right bottom; }
+.engineering-note { position: absolute; top: 39px; left: 75.3%; font-size: 10px; letter-spacing: 0.16em; line-height: 1.85; color: color-mix(in oklab, var(--foreground) 35%, var(--background)); }
+.engineering-rail { position: absolute; right: 3.2%; top: 45px; height: 195px; display: flex; align-items: end; gap: 18px; padding-bottom: 14px; }
+.engineering-rail-line { position: absolute; left: 0; top: 0; height: 195px; width: 1px; background: var(--border); }
+.engineering-rail-line::before { content: ''; position: absolute; left: -1px; top: 2px; width: 3px; height: 3px; border-radius: 50%; background: var(--foreground); }
+.engineering-rail p { padding-left: 18px; font-size: 9px; letter-spacing: 0.12em; line-height: 2.2; color: var(--muted-foreground); }
+.engineering-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); margin: 25px 3.8% 0; }
+.engineering-principle { min-width: 0; padding: 0 25px; display: flex; flex-direction: column; }
+.engineering-principle:first-child { padding-left: 0; padding-right: 22px; }
+.engineering-principle:last-child { padding-right: 0; }
+.engineering-principle + .engineering-principle { border-left: 1px solid var(--border); }
+.principle-number { font-size: 32px; line-height: 1; font-weight: 300; color: color-mix(in oklab, var(--foreground) 72%, var(--background)); }
+.principle-heading { font-size: 19px; line-height: 1.02; font-weight: 700; }
+.principle-image { position: relative; height: 156px; margin-top: 16px; overflow: hidden; border-radius: var(--section-media-radius); }
+.principle-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.principle-accent { position: absolute; top: 0; bottom: 0; left: 0; width: 22%; border-radius: var(--section-media-radius); background-color: var(--highlight); }
+.principle-image-architecture img { padding-left: 15%; }
+.principle-image-technology .principle-accent { top: 52%; left: auto; right: 0; width: 34%; background-color: var(--hero-blue); box-shadow: -4px -4px 0 var(--background); }
+.principle-image-integration .principle-accent { width: 11%; background-color: var(--core-accent); }
+.principle-image-improvement .principle-accent { left: auto; right: 0; width: 27%; }
+.principle-copy { margin-top: 10px; min-height: 84px; }
+.principle-action { margin-top: 11px; }
+.principle-footer { margin-top: 13px; }
+@media (min-width: 1536px) {
+  .engineering-intro { height: 310px; }
+  .engineering-cover { height: 310px; }
+  .engineering-heading { font-size: 72px; }
+  .principle-image { height: 180px; }
+}
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .engineering-heading { font-size: 52px; }
+  .engineering-note { font-size: 8px; }
+  .engineering-principle { padding-inline: 18px; }
+  .principle-heading { font-size: 17px; }
+  .principle-copy { min-height: 110px; }
+}
+@media (max-width: 1023px) {
+  .engineering-section { min-height: auto; padding: 32px 20px; }
+  .engineering-intro { height: auto; }
+  .engineering-intro-copy { margin-left: 0; padding-top: 0; }
+  .engineering-heading { font-size: 52px; }
+  .engineering-cover { position: relative; left: 0; width: 100%; height: 240px; margin-top: 25px; }
+  .engineering-cover { display: none; }
+  .engineering-note, .engineering-rail { display: none; }
+  .engineering-grid { margin: 32px 0 0; grid-template-columns: repeat(2,minmax(0,1fr)); row-gap: 35px; }
+  .engineering-principle { padding-inline: 20px; }
+  .engineering-principle:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .engineering-principle:nth-child(even) { padding-right: 0; }
+  .principle-copy { min-height: 95px; }
+}
+@media (max-width: 639px) {
+  .engineering-heading { font-size: 36px; }
+  .section-label { font-size: 9px; }
+  .engineering-grid { grid-template-columns: minmax(0,1fr); gap: 28px; }
+  .engineering-principle, .engineering-principle:first-child, .engineering-principle:last-child { padding: 0; border-left: 0; }
+  .principle-image { height: auto; aspect-ratio: 1.8; }
+  .principle-copy { min-height: 0; }
+}
