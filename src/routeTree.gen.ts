@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiEngineeringAdviserRouteImport } from './routes/api/engineering-adviser'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiEngineeringAdviserRoute = ApiEngineeringAdviserRouteImport.update({
+  id: '/api/engineering-adviser',
+  path: '/api/engineering-adviser',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/api/engineering-adviser': typeof ApiEngineeringAdviserRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/api/engineering-adviser': typeof ApiEngineeringAdviserRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/api/engineering-adviser': typeof ApiEngineeringAdviserRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/api/engineering-adviser'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/api/engineering-adviser'
+  id: '__root__' | '/' | '/api/engineering-adviser'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ApiEngineeringAdviserRoute: typeof ApiEngineeringAdviserRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/engineering-adviser': {
+      id: '/api/engineering-adviser'
+      path: '/api/engineering-adviser'
+      fullPath: '/api/engineering-adviser'
+      preLoaderRoute: typeof ApiEngineeringAdviserRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ApiEngineeringAdviserRoute: ApiEngineeringAdviserRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
