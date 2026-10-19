@@ -8,6 +8,7 @@ import { CapabilitiesSection } from "@/components/capabilities-section";
 import { CoreSection } from "@/components/core-section";
 import { HeroSection } from "@/components/hero-section";
 import { EngineeringSection } from "@/components/engineering-section";
+import { EngineeringAdviser } from "@/components/engineering-adviser";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -144,6 +145,7 @@ function Index() {
       <CapabilitiesSection />
       <CoreSection />
       <EngineeringSection />
+      <EngineeringAdviser />
     </main>
   );
 }
